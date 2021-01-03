@@ -33,7 +33,7 @@ schema_config:
 
 storage_config:
   aws:
-    s3: s3://user:pass@s3.local:9090/chunks
+    s3: s3://user:freehongkong8964@s3.local:9000/chunks
     s3forcepathstyle: true
     dynamodb:
       dynamodb_url: dynamodb://user:pass@dynamodb.local:8000
