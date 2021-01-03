@@ -9,7 +9,7 @@ services:
     networks:
       - loki
     volumes:
-      - ./loki.yaml:/etc/loki/local-config.yaml
+      - ./loki-local-config.yml:/etc/loki/local-config.yaml
     depends_on:
       - dynamodb-local
       - s3-local
