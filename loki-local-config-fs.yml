@@ -18,7 +18,7 @@ schema_config:
   configs:
   - from: 2020-12-30
     store: boltdb-shipper
-    object_store: aws
+    object_store: filesystem
     schema: v11
     index:
       prefix: index_
@@ -34,7 +34,7 @@ storage_config:
     active_index_directory: /tmp/loki/boltdb-shipper-active
     cache_location: /tmp/loki/boltdb-shipper-cache
     cache_ttl: 10s         # Can be increased for faster performance over longer query periods, uses more disk space
-    shared_store: aws
+    shared_store: filesystem
   filesystem:
     directory: /tmp/loki/chunks
 
@@ -45,4 +45,4 @@ limits_config:
 
 compactor:
   working_directory: /loki/compactor
-  shared_store: aws
+  shared_store: filesystem
