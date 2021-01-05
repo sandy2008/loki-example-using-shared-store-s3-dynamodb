@@ -19,6 +19,7 @@ services:
     image: grafana/promtail:latest
     volumes:
       - ./var/log:/var/log
+      - ./promtail-local-config.yml:/etc/promtail/docker-config.yaml
     command: -config.file=/etc/promtail/docker-config.yaml
     networks:
       - loki
